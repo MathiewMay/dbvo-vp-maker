@@ -1,24 +1,23 @@
-# Logs
-logs
+# Dependencies
+/node_modules/
+/target/
+/cargo.lock
+/.yarn/*
+/src-tauri/bin/
+
+# Build artifacts
+/dist/
+/build/
+/pkg/
+
+# Editor files
+.vscode/
+.idea/
+
+# Log files
+/log/
 *.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-*.local
-
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
+# Temporary files
 .DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
+Thumbs.db
