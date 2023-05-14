@@ -3,7 +3,6 @@
 /target/
 /cargo.lock
 /.yarn/*
-/src-tauri/bin/
 
 # Build artifacts
 /dist/
