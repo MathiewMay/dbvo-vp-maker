@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .std-shadow {
+    --tw-shadow-color: #000;
+    --tw-shadow: var(--tw-shadow-colored);
+    -tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+  .std-flex {
+    display: flex;
+    display: flex;
+    flex-direction: row;
+    padding-left: 0.5rem/* 8px */;
+    padding-right: 0.5rem/* 8px */;
+    gap: 0.5rem/* 8px */;
+  }
+}
+
+:root {
+  font-family: Arial;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  color: #f6f6f6;
+  background-color: #2f2f2f;
+}
+
+html, body {
+  height: 100%;
+}
+
+#app {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  background-color: darkslategray;
+  width: 5px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background-color:slategray;
+  border-radius: 10px;
+}
