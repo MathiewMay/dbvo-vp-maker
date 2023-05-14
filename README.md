@@ -1,7 +1,3 @@
-# Tauri + Svelte + Typescript
-
-This template should help get you started developing with Tauri, Svelte and TypeScript in Vite.
-
 ## Installation
 
 Make sure you install ffmpeg.exe in src-tauri/bin, naming it accordingly
