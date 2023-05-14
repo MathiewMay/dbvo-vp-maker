@@ -1,10 +1,8 @@
 import { writable } from "svelte/store";
 import type { Model } from "./lib/Interfaces/Models";
 
-// Define a writable store for the models
 export const modelsStore = writable<Model[]>([]);
 
-// Define a function to push a model to the store
 export function pushModel(model: Model) {
   modelsStore.update(models => {
     models.push(model);
@@ -12,7 +10,6 @@ export function pushModel(model: Model) {
   });
 }
 
-// Define a function to get all models from the store
 export function getAllModels(): Model[] {
   let models: Model[] = [];
   modelsStore.subscribe(m => {
