@@ -7,6 +7,7 @@ This template should help get you started developing with Tauri, Svelte and Type
 Make sure you install ffmpeg.exe in src-tauri/bin, naming it accordingly
 
 npm install
+
 npm run tauri dev
 
 ## Recommended IDE Setup
