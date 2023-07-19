@@ -7,9 +7,10 @@
   import TextConverter from './pages/tools/TextConverter.svelte';
   import LocaleMaker from './pages/tools/LocaleMaker.svelte';
   import { executeBmlFuzEncodeCommand } from './lib/BmlFuzEncodeAPI';
+  import WavPatcher from './pages/tools/WAVPatcher.svelte';
 
 
-  enum Page { ELEVEN, LIPGEN, FUZGEN, VPMAKER, TEXTConverter, LOCALEMAKER }
+  enum Page { ELEVEN, LIPGEN, FUZGEN, VPMAKER, TEXTConverter, LOCALEMAKER, WAVPatcher }
   let CurrentPage: Page = Page.ELEVEN;
 
   function switchPage(newPage: Page) {
@@ -23,6 +24,7 @@
   <div class="dropdown dropdown-hover">
     <button class="tab tab-sm {CurrentPage==Page.LIPGEN||CurrentPage==Page.FUZGEN?'tab-active text-base-400':''}">Tools</button>
     <ul class="dropdown-content menu p-2 std-shadow bg-base-300 rounded-box w-52">
+      <li><button class="btn {CurrentPage == Page.WAVPatcher?'bg-base-accent btn-outline hover:bg-base-100 hover:text-white':'btn-ghost'}" on:click={() => switchPage(Page.WAVPatcher)}>Wav Patcher</button></li>
       <li><button class="btn {CurrentPage == Page.LIPGEN?'bg-base-accent btn-outline hover:bg-base-100 hover:text-white':'btn-ghost'}" on:click={() => switchPage(Page.LIPGEN)}>Lip Generator</button></li>
       <li><button class="btn {CurrentPage == Page.LOCALEMAKER?'bg-base-accent btn-outline hover:bg-base-100 hover:text-white':'btn-ghost'}" on:click={() => switchPage(Page.LOCALEMAKER)}>Locale Maker</button></li>
       <li><button class="btn {CurrentPage == Page.TEXTConverter?'bg-base-accent btn-outline hover:bg-base-100 hover:text-white':'btn-ghost'}" on:click={() => switchPage(Page.TEXTConverter)}>Text Parser</button></li>
@@ -44,6 +46,9 @@
   </div>
   <div class="lipgen flex flex-col gap-4 {CurrentPage == Page.LIPGEN?'':'hidden'}">
     <LipGenerator/>
+  </div>
+  <div class="lipgen flex flex-col gap-4 {CurrentPage == Page.WAVPatcher?'':'hidden'}">
+    <WavPatcher/>
   </div>
   <!--
   <div class="fuzgen flex flex-col gap-4 {CurrentPage == Page.FUZGEN?'':'hidden'}">

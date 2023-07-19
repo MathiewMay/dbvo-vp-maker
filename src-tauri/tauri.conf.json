@@ -8,7 +8,7 @@
   },
   "package": {
     "productName": "DBVO Voice Pack Maker",
-    "version": "1.2.1"
+    "version": "1.3.0"
   },
   "tauri": {
     "allowlist": {
@@ -67,7 +67,7 @@
       {
         "fullscreen": false,
         "resizable": false,
-        "title": "DBVO Voice Pack Maker 1.2.1",
+        "title": "DBVO Voice Pack Maker 1.3.0",
         "width": 800,
         "height": 800
       }
